@@ -1,0 +1,86 @@
+/* home.module.css */
+
+@font-face {
+  font-family: 'Karla-Regular';
+  src: url('../fonts/Karla-Regular.ttf') format('truetype');
+  /* Add additional font formats as needed for cross-browser compatibility */
+}
+
+@font-face {
+  font-family: 'Proxima-Nova-Bold';
+  src: url('../fonts/Proxima-Nova-Bold.otf') format('opentype');
+  /* Add additional font formats as needed for cross-browser compatibility */
+}
+
+@font-face {
+  font-family: 'Nexa-Regular';
+  src: url('../fonts/Nexa-Regular.otf') format('opentype');
+  /* Add additional font formats as needed for cross-browser compatibility */
+}
+
+
+.container {
+  background-color: #F5F1FF; /* Background color */
+  padding: 0 100px; /* Standard padding on both right and left sides */
+}
+
+.py-8 {
+  font-family: 'Proxima-Nova-Bold', sans-serif; /* Main header text font */
+}
+
+.py-8 h1 {
+  font-weight: bold;
+  font-size: 2.5rem; /* Adjust font size if needed */
+  font-family: 'Proxima-Nova-Bold', sans-serif; /* Set font family */
+}
+
+.py-8 h2 {
+  font-family: 'Nexa-Regular', sans-serif; /* h2 text font */
+  font-weight: bold;
+  font-size: 2rem; /* Adjust font size if needed */
+  line-height: 2; /* Line spacing */
+}
+
+.py-8 p {
+  font-family: 'Karla-Regular', sans-serif; /* Paragraph text font */
+  font-size: 1.2rem; /* Adjust font size if needed */
+}
+
+.py-8 button, /* Apply style to button */
+.createAccountBtn { /* Apply style to create account button */
+  padding: 0.7rem 1.5rem; /* Adjust padding if needed */
+  border-radius: 10px; /* Set border radius */
+  font-family: 'Proxima-Nova-Bold', sans-serif; /* Button text font */
+  font-weight: bold; /* Set font weight to bold */
+  margin-top: 1rem; /* Adjust margin-top if needed */
+  background-color: #4c28BC; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: 2px solid #4c28BC; /* Button border */
+}
+
+.py-8 button:hover, /* Apply style to button on hover */
+.createAccountBtn:hover { /* Apply style to create account button on hover */
+  background-color: #3f1f91; /* Darker background color on hover */
+  border-color: #3f1f91; /* Darker border color on hover */
+}
+
+.flex {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+
+/* CSS for desktop layout */
+.heroDesktop {
+  display: flex;
+  justify-content: flex-end; /* Align to the right side of the container */
+}
+
+/* CSS for mobile layout */
+@media (max-width: 768px) {
+  .heroMobile {
+    display: block; /* Change to block level element */
+    margin-top: 2rem; /* Add margin to separate from the content above */
+  }
+}

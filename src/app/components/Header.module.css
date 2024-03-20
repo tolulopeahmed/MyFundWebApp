@@ -1,67 +1,150 @@
+/* Header */
 .header {
-    background-color: #f5f5f5; /* Light gray background */
-    justify-content: space-between; /* Align items horizontally */
-    align-items: center;
-    padding: 0.8rem 1.6rem; /* Adjust padding if needed */
-    display: flex; /* Ensure proper flexbox behavior */
-    color: #333; /* Default text color */
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    margin-right: 0.8rem; /* Adjust margin if needed */
-  }
-  
-  .nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav li {
-    display: inline-block;
-    margin-right: 1.6rem; /* Adjust margin if needed */
-  }
-  
-  .nav a {
-    color: inherit; /* Inherit text color from header */
-    text-decoration: none;
-  }
-  
-  .nav a:hover {
-    color: #999; /* Gray on hover */
-  }
-  
-  .buttons {
-    display: flex;
-  }
-  
-  .buttons button {
-    border: none;
-    padding: 0.4rem 1rem; /* Adjust padding if needed */
-    border-radius: 5px;
-    cursor: pointer; /* Indicate clickable button */
-  }
-  
-  .login-btn {
-    background-color: #4C28BC;
-    color: white;
-  }
-  
-  /* New class for menu item font */
-  .navItemFont {
-    font-family: 'Product Sans', sans-serif;
-  }
-  
-  /* Update create account button color */
-  .create-account-btn {
-    background-color: #4C28BC;
-    color: white;
-    font-family: 'Product Sans', sans-serif;
+  background-color: #ffffff; /* White background */
+  justify-content: space-between; /* Align items horizontally */
+  align-items: center;
+  padding: 0.01rem 2rem; /* Adjust padding if needed */
+  display: flex; /* Ensure proper flexbox behavior */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Add shadow */
+    white-space: nowrap; /* Prevent text wrapping */
 
+}
+
+.logo {
+  position: relative;
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  font-family: 'Product Sans', sans-serif; /* Set font family */
+  font-weight: bold; /* Set font weight to bold */
+}
+
+
+
+.logo img {
+  margin-right: 0.8rem; /* Adjust margin if needed */
+}
+
+/* Navigation */
+.nav {
+  list-style: none;
+  padding: 9;
+  margin: 0;
+}
+
+.nav li {
+  display: inline-block;
+  margin-right: 2rem; /* Increased margin for extra space */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav a {
+  color: #555; /* Deep grey text color */
+  text-decoration: none;
+  font-family: 'Product Sans', sans-serif; /* Set font family */
+  font-weight: bold; /* Set font weight to bold */
+  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 14px;
+  margin-left: 20;
+}
+
+.nav a:hover {
+  color: #4c28BC; /* Gray on hover */
+}
+
+
+/* Mobile Menu */
+.mobileMenu {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburgerIcon {
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: all 0.3s ease; /* Add smooth transition */
+}
+
+.hamburgerIcon::before,
+.hamburgerIcon::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: all 0.3s ease; /* Add smooth transition */
+}
+
+.closeIcon::before {
+  transform: translateY(5px) rotate(45deg); /* Rotate the top line */
+}
+
+.closeIcon::after {
+  transform: translateY(-5px) rotate(-45deg); /* Rotate the bottom line */
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  margin-left: auto; /* Move buttons to the right */
+}
+
+.buttons button {
+  padding: 0.7rem 1.5rem; /* Adjust padding if needed */
+  border-radius: 10px; /* Set border radius */
+  font-family: 'Product Sans', sans-serif; /* Set font family */
+  font-weight: bold; /* Set font weight to bold */
+  margin-right: 10px; /* Add space between buttons */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.buttons button:last-child {
+  margin-right: 0; /* Remove margin from the last button */
+}
+
+/* Separate style for login button */
+.loginBtn {
+  border-color: #4c28BC; /* Border color */
+  color: #4c28BC; /* Button text color */
+  background-color: #fff; /* Button background color */
+  border: 2px solid; /* Add border */
+}
+
+/* Separate style for create account button */
+.createAccountBtn {
+  color: #ffffff; /* White text color */
+  background-color: #4c28BC; /* Button background color */
+  border-color: #4c28BC; /* Border color */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 4px;
   }
-  
+
+  .mobileMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .buttons {
+    margin-right: 20px; /* Add space between buttons */
+  }
+
+  .buttons button {
+    margin-right: 10px; /* Add space between buttons */
+  }
+}

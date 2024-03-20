@@ -1,34 +1,43 @@
+// index.tsx
+
 import React from 'react';
-import Image from 'next/image';
-import Header from '@/app/components/header';
+import Header from '@/app/components/Header';
 import HeroImage from '@/app/components/HeroImage';
 import Footer from '@/app/components/footer';
+import styles from './home.module.css'; // Import the CSS file
+import Image from 'next/image'; // Import Image component from next/image
+import playstoreImage from './playstore.png'; // Import the playstore image
+import appstoreImage from './appstore.png'; // Import the appstore image
 
 const Home: React.FC = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto">
-        {/* Main header text */}
-        <div className="py-8 px-8">
-          <h1 className="text-4xl font-bold">The True Way to Save and Invest</h1>
-          <p className="text-lg mt-2">
-            MyFund helps you grow your funds towards owning properties for a
-            lifetime rent via our national hostel project.
-          </p>
-          <button className="bg-green-500 text-white px-4 py-2 rounded-lg mt-4">
-            CREATE FREE ACCOUNT
-          </button>
-        </div>
-
-        {/* App store logos */}
-        <div className="flex justify-center items-center py-4">
-          {/* Assuming logo.png and playstore.png are in the public folder
-          <Image src="/logo.png" alt="MyFund Logo" width={32} height={32} />
-          <Image src="/playstore.png" alt="App Store Logo" width={32} height={32} /> */}
+      <div className={`container mx-auto ${styles.container}`}>
+        <div className={`py-8 px-8 ${styles.py8}`}>
+          <h1>The True Way to Save and Invest</h1>
+          <h2 className={styles.h2}>Save . Buy Properties . Earn Rent</h2>
+          <p>MyFund helps you grow your funds towards owning properties for a lifetime rent via our national hostel project.</p>
+          <button className={`${styles.button} ${styles.createAccountBtn}`}>CREATE FREE ACCOUNT</button>
+          <div className="flex justify-between items-center py-4">
+            {/* Use Image component for optimization */}
+            <Image src={playstoreImage} alt="Play Store" width={150} height={50} />
+            <Image src={appstoreImage} alt="App Store" width={150} height={50} />
+          </div>
         </div>
       </div>
-      <HeroImage />
+      {/* Conditionally render HeroImage component based on screen size */}
+      <div className={`container mx-auto ${styles.container}`}>
+        <div className={`py-8 px-8 ${styles.py8}`}>
+          {/* Use CSS classes for responsive layout */}
+          <div className={`hidden md:block ${styles.heroDesktop}`}>
+            <HeroImage />
+          </div>
+          <div className={`md:hidden ${styles.heroMobile}`}>
+            <HeroImage />
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );

@@ -33,9 +33,7 @@ const Home: React.FC = () => {
           <div className={`hidden md:block ${styles.heroDesktop}`}>
             <HeroImage />
           </div>
-          <div className={`md:hidden ${styles.heroMobile}`}>
-            <HeroImage />
-          </div>
+
         </div>
       </div>
       <Footer />

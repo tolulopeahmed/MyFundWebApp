@@ -74,7 +74,16 @@
 /* CSS for desktop layout */
 .heroDesktop {
   display: flex;
+  width: -400px;
+  height: auto; /* Maintain aspect ratio */
+  margin-top: -300px;
   justify-content: flex-end; /* Align to the right side of the container */
+}
+
+.heroDesktop img {
+  object-fit: cover; /* Ensure the image covers the entire container while maintaining aspect ratio */
+  width: 100%; /* Make sure the image fills its container */
+  height: 100%; /* Make sure the image fills its container */
 }
 
 /* CSS for mobile layout */

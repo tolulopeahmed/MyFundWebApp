@@ -8,10 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        karla: ["var(--font-karla)"],
+        "product-sans": ["var(--font-product-sans)"],
+        nexa: ["var(--font-nexa)"],
+        proxima: ["var(--font-proxima)"],
+      },
+      colors: {
+        purple1: "#4C28BC",
+        purple2: "#DCD1FF",
+        purple3: "#E08CF7",
+        orange: "#FE531F",
+        cream: "#FBDABB",
+        silver: "#EDEFEE",
+        black1: "#333333",
       },
     },
   },

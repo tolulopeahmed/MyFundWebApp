@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
 import FAQs from "@/data/faqs";
-import { ReactElement } from "react";
+import { useState } from "react";
 
 const FaqItem = ({
   question,
@@ -9,16 +10,27 @@ const FaqItem = ({
   question: string;
   answer: string;
 }) => {
+  const [open, setIsOpen] = useState(false);
+
   return (
-    <div className="mb-6 max-w-4xl border-b-[2px] border-[#dfdfdf] p-8">
-      <div className="flex cursor-pointer justify-between">
+    <div className="mb-6 w-full border-b-[2px] border-[#dfdfdf] p-8">
+      <div className="flex cursor-pointer justify-between w-full">
         <p className="text-xl font-bold">{question}</p>
-        <div className="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center">
-          <div className="absolute h-5 w-0.5 bg-[#276ef1]"></div>
-          <div className="h-0.5 w-5 bg-[#276ef1]"></div>
+        <div
+          className="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center"
+          onClick={() => setIsOpen((state) => !state)}
+        >
+          <div className="absolute h-5 w-0.5 bg-purple1"></div>
+          <div className="h-0.5 w-5 bg-purple1"></div>
         </div>
       </div>
-      <p className="my-4">{answer}</p>
+      <p
+        className={`my-4 transition-all ease-in ${
+          open ? "opacity-100 visible" : "opacity-0 hidden"
+        }`}
+      >
+        {answer}
+      </p>
     </div>
   );
 };
@@ -43,10 +55,10 @@ const FAQ = () => {
         </div>{" "}
         {/* FAQ Content */}{" "}
         <div className="mb-12 flex flex-col items-center">
-          {FAQs.map(({ item: ReactElement, index: number }) => (
+          {FAQs.map((item, index) => (
             <FaqItem
               key={index}
-              question={FaqItem.question}
+              question={item.question}
               answer={item.answer}
             />
           ))}

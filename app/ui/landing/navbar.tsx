@@ -40,13 +40,13 @@ const NavBar = () => {
             {" "}
             {/* DROPDOWN */}{" "}
             <div className="relative flex flex-col">
-              <a
+              <Link
                 onClick={() => setIsOpen((state: boolean) => !state)}
-                href="#"
+                href="/about"
                 className={`flex flex-row rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800 `}
               >
                 About{" "}
-              </a>{" "}
+              </Link>{" "}
             </div>
             <Link
               href="/faq"
@@ -54,12 +54,12 @@ const NavBar = () => {
             >
               FAQs
             </Link>
-            <a
-              href="https://tailwind-css-template-breeze.vercel.app/Blog"
+            <Link
+              href="/blog"
               className="rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800"
             >
-              Help
-            </a>
+              Blog
+            </Link>
           </div>{" "}
           {/* MENU CONTENT 2 */}{" "}
           <div
@@ -105,23 +105,23 @@ const NavBar = () => {
               <path
                 d="M3.75 12H20.25"
                 stroke="#160042"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
               <path
                 d="M3.75 6H20.25"
                 stroke="#160042"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
               <path
                 d="M3.75 18H20.25"
                 stroke="#160042"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
             </svg>
           </a>

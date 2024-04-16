@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const NavBar = () => {
@@ -15,8 +16,8 @@ const NavBar = () => {
         <div className="flex flex-col  py-6 lg:flex-row lg:items-center lg:justify-between lg:py-4 ">
           {" "}
           {/* SVG LOGO - YOU CAN REPLACE THIS */}{" "}
-          <a
-            href="https://breeze-templates.webflow.io/"
+          <Link
+            href="/"
             aria-current="page"
             className="relative float-left bg-[#00000000] leading-[0] text-[#333333] no-underline hover:outline-0 max-[991px]:mr-auto max-[767px]:pl-0"
             aria-label="home"
@@ -29,7 +30,7 @@ const NavBar = () => {
               width={150}
               height={150}
             />
-          </a>{" "}
+          </Link>{" "}
           {/* MENU CONTENT 1 */}{" "}
           <div
             className={`mt-14 transition-all ease-in flex-col space-y-8 lg:mt-0 lg:flex lg:flex-row lg:space-x-1 lg:space-y-0 ${
@@ -47,12 +48,12 @@ const NavBar = () => {
                 About{" "}
               </a>{" "}
             </div>
-            <a
-              href="https://tailwind-css-template-breeze.vercel.app/About"
+            <Link
+              href="/faq"
               className="rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800"
             >
-              Support
-            </a>
+              FAQs
+            </Link>
             <a
               href="https://tailwind-css-template-breeze.vercel.app/Blog"
               className="rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800"
@@ -66,14 +67,14 @@ const NavBar = () => {
               isOpen ? "visible flex" : "hidden invisible"
             } transition-all ease-in`}
           >
-            <a
-              href="https://tailwind-css-template-breeze.vercel.app/Login"
+            <Link
+              href="/register"
               className="rounded-lg lg:px-6 lg:py-4 lg:hover:text-gray-800 lg:hover:underline"
             >
               Sign Up
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/login"
               className="flex max-w-[300px] flex-row items-center border-2 border-black bg-white px-8 py-4 font-semibold text-black transition [box-shadow:rgb(76,_40,188)-8px_8px] hover:[box-shadow:rgb(171,_196,_245)_0px_0px]"
             >
               <p className="mr-6 font-bold">Login</p>
@@ -86,7 +87,7 @@ const NavBar = () => {
                 <title>Arrow Right</title>
                 <polygon points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9"></polygon>
               </svg>
-            </a>
+            </Link>
           </div>{" "}
           {/* BURGER MENU */}{" "}
           <a

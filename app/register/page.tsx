@@ -52,10 +52,7 @@ const RegisterPage = () => {
               {/* Сheckbox */}{" "}
               <label className="mb-6 flex items-center pb-12 font-medium lg:mb-1">
                 <input type="checkbox" name="checkbox" />
-                <span
-                  className="ml-4 inline-block cursor-pointer text-sm"
-                  htmlFor="checkbox"
-                >
+                <span className="ml-4 inline-block cursor-pointer text-sm">
                   I agree with the{" "}
                   <a href="#" className="font-bold text-[#0b0b1f]">
                     Terms &amp; Conditions

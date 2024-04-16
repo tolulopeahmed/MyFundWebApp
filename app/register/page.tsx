@@ -46,7 +46,7 @@ const RegisterPage = () => {
                   type="password"
                   className="mb-4 block h-9 w-full border border-black bg-[#f2f2f7] px-3 py-6 pl-14 text-sm text-[#333333]"
                   placeholder="Password (min 8 characters)"
-                  required=""
+                  required
                 />
               </div>{" "}
               {/* Сheckbox */}{" "}
